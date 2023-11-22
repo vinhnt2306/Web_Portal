@@ -1,0 +1,22 @@
+
+.line{
+  height: 3px;
+  width: 100%;
+  background-position: -30px;
+  background-size: 116px 3px;
+  background-image: repeating-linear-gradient(45deg,#6fa6d6,#6fa6d6 33px,transparent 0,transparent 41px,#f18d9b 0,#f18d9b 74px,transparent 0,transparent 82px);
+}
+.btn{
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  float: right;
+  box-shadow: 0 0 0 0!important;
+  border: 0!important;
+  color: #05a!important;
+  line-height: 21px;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+  background: transparent;
+}

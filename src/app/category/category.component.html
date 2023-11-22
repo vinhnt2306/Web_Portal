@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="card">
+    <p-carousel [value]="categorys" [numVisible]="6" [numScroll]="6" [circular]="false">
+      <ng-template let-cat pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+          <div class="mb-3">
+            <img [src]="cat.image" class="w-6 shadow-2"/>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ cat.name }}</h4>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  <hr>
+  <!-- <h1>Danh mục</h1>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <ul class="list-group list-group-horizontal" style="text-align: center;">
+          <div class="container pt-5">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col m-4" *ngFor="let cate of categorys">
+                  <a href="#" class="text-center d-flex flex-column justify-content-center">
+                    <button type="button" class="btn btn-outline-secondary mx-auto p-3 mb-2"
+                      data-mdb-ripple-color="dark">
+                      <img [src]="cate.image" alt="" style="height: 100px; width: 100px;">
+                    </button>
+                    <div class="text-dark">{{cate.name}}</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="carousel-item"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"
+      style="justify-content: left;">
+      <span class="carousel-control-prev-icon btn-secondary" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"
+      style="justify-content: right;">
+      <span class="carousel-control-next-icon btn-secondary" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+  <hr>
+  <!-- <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-3" *ngFor="let cate of categorys">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <ul class="list-group list-group-horizontal">
+                <li style="display: block;">
+                  <img [src]="cate.image" alt="" style="height: 50px; width: 50px;">
+                  <div class="text-dark">{{cate.name}}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <hr>
+  <!-- <section>
+    <h1>Danh mục sản phẩm</h1>
+    <div class="container pt-5">
+      <div class="row py-4">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-2" *ngFor="let cate of categorys">
+              <a href="#" class="text-center d-flex flex-column justify-content-center">
+                <button type="button" class="btn btn-outline-secondary mx-auto p-3 mb-2" data-mdb-ripple-color="dark">
+                  <img [src]="cate.image" alt="" style="height: 50px; width: 50px;">
+                </button>
+                <div class="text-dark">{{cate.name}}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <hr>
+</div>

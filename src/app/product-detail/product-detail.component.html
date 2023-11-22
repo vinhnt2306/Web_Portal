@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="row" >
+        <div class="col-md-6 product-image">
+          <h2 class="product-name">{{productDetail.name}}</h2>
+          <img [src]="productDetail.image" class="product-image"/>
+        </div>
+      <div class="col-md-6 product-details" >
+          <h2 class="product-name">{{productDetail.name}}</h2>
+          <p class="product-description">Mô tả {{productDetail.description}}</p>
+          <p class="product-price">Giá: ${{productDetail.price}}</p>
+          <div class="quantity-control">
+            <button (click)="decreaseQuantity()" class="btn btn-secondary">-</button>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-control quantity-input" [(ngModel)]="quantity" min="1">
+            <button (click)="increaseQuantity()" class="btn btn-secondary">+</button>
+          </div>
+          <button class="btn btn-primary" (click)="addToCart(productDetail.id,quantity)">Thêm vào giỏ hàng</button>
+      </div>
+  </div>
+</div>
+

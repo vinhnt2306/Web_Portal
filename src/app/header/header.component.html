@@ -1,0 +1,140 @@
+<div class="header">
+  <div class="container">
+    <!-- Navbar -->
+    <div class="navbar d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a href="home-page" class="font-weight-bold">Trang chủ</a>
+        <div class="hr2 mx-2"></div>
+        <a href="category-page" class="font-weight-bold">Danh mục</a>
+        <div class="hr2 mx-2"></div>
+        <a href="product" class="font-weight-bold">Sản Phẩm</a>
+        <div class="hr2 mx-2"></div>
+        <a href="taikhoan" class="font-weight-bold" style="width: 70px;">Tin tức</a>
+        <div class="hr2 mx-2"></div>
+        <a href="#" class="font-weight-bold" style="width: 110px;">Thông Báo</a>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <a href="login" class="font-weight-bold" style="text-align: right; width: 110px;" *ngIf="!isLoggedIn" >Đăng nhập</a>
+        <div class="hr2 mx-2" *ngIf="!isLoggedIn"></div>
+        <a href="register" class="font-weight-bold" *ngIf="!isLoggedIn">Đăng ký</a>
+        <div class="dropdown" *ngIf="isLoggedIn">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user" style="color: #f2f2f2;"></i>
+            Account
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+          </ul>
+          </div>
+      </div>
+      <!-- Navbar -->
+    </div>
+    <div class="d-flex mt-3">
+      <!-- align-items-center -->
+      <div class="d-flex">
+        <img src="https://www.mepcontent.com/data/Content/Images/News/d93766409ff0454fb8f77994c9436f64_en-en.png">
+        <div class="hr1 mx-2"></div>
+        <a class="font-weight-bold" href="home-page" style="color: #fff;">ACV Store</a>
+      </div>
+      <!-- <div class="wrap-navbar-input">
+        <div class="wrap-search">
+             <input type="text" class="form-control" placeholder="Tìm kiếm" />
+          <div class="wrap-icon-s">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div> -->
+      <div class="wrap-navbar-input ">
+        <div class="wrap-search">
+          <input type="text" class="form-control" placeholder="Tìm kiếm" [(ngModel)]="searchTerm"
+            (input)="searchProduct()" />
+          <div *ngFor="let product of filteredProducts" style="color: black;">
+            <!-- Hiển thị thông tin sản phẩm của bạn ở đây -->
+            {{ product.name}}
+          </div>
+          <div class="wrap-icon-s align-items-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+
+
+      <li class="cart-shop dropdown">
+        <a class="nav-link dropdown-toggle cart fw-semibold text-uppercase text-black  me-1"
+           href="#"
+           id="navbarDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+
+          <i (click)="onLoadCart()" class="fa-solid fa-cart-plus fa-2x"></i></a>
+        <div class="dropdown-menu">
+          <div class="CartContainer">
+            <div class="row">
+              <div class="col-6">
+                Giỏ hàng
+              </div>
+              <div class="col-6 text-end text-danger">
+                Xóa
+              </div>
+            </div>
+            <div class="row pt-1" *ngFor="let cart of cartProducts ">
+              <div class="col-4">
+                <img [src]="cart.image" class="img-fluid"
+                  style="height: 50px; width: 70px; border-radius: 10%; object-fit: contain; margin-left: 20px;">
+              </div>
+              <div class="col-3">
+                {{cart.nameProduct}}
+              </div>
+              <div class="col-2">
+                {{cart.quantity}}
+              </div>
+              <div class="col-2 text-end">
+                {{cart.price}}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+
+              </div>
+              <div class="col-9">
+                <hr>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+
+              </div>
+              <div class="col-2">
+
+              </div>
+              <div class="col-4">
+                <div class="Subtotal">Sub-Total</div>
+                <div> <small> items</small></div>
+              </div>
+              <div class="col-4 text-end">
+                <strong>hi</strong>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-end">
+                <button class="btn btn-sm btn-success" (click)="checkOutShoppingCart()">Xem giỏ hàng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+

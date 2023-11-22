@@ -1,0 +1,95 @@
+<!-- <div class="auth-form">
+  <div class="auth-form__container">
+    <div class="auth-form__header">
+      <h3 class="auth-form__heading">Đăng nhập</h3>
+      <a class="auth-form__switch-btn" href="register">Đăng ký</a>
+    </div>
+
+    <div class="auth-form__form">
+      <form (ngSubmit)="onSubmit()">
+        <div class="auth-form__group">
+          <input type="text" class="auth-form__input" placeholder="Email của bạn" id="username" name="username"
+            [(ngModel)]="model.phoneNumber" required>
+        </div>
+        <div class="auth-form__group">
+          <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn" id="password" name="password"
+            [(ngModel)]="model.password" required>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">ĐĂNG NHẬP</button>
+        <div class="auth-form__aside">
+          <p class="auth-form__help">
+            <a href="" class="auth-form__help-link auth-form__help-link-forgot">Quên mật khẩu ?</a>
+          </p>
+        </div>
+
+        <div class="auth-form__controls">
+          <button class="btn btn-normal auth-form__controls-back">
+            <a href="#" class=""> TRỞ LẠI</a></button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<section class="h-150 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-150">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">We are more than just a company</h4>
+                  <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+                  <div class="text-center">
+                    <img src="https://www.mepcontent.com/data/Content/Images/News/d93766409ff0454fb8f77994c9436f64_en-en.png"
+                      style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">Chào mừng bạn tới ACV Store</h4>
+                  </div>
+
+                  <form (ngSubmit)="onSubmit()">
+                    <h4>Đăng Nhập :</h4>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example11">Tài Khoản</label>
+                      <input type="text" id="form2Example11" class="form-control" id="phoneNumber" name="phoneNumber"
+                        placeholder="Số điện thoại hoặc email" [(ngModel)]="model.phoneNumber" required />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example22">Mật Khẩu</label>
+                      <input type="password" id="form2Example22" id="password" name="password" class="form-control" [(ngModel)]="model.password" required/>
+                    </div>
+
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit"
+                       style="height: 50px;
+                       width: 100%;
+                       border-radius: 15px;">Log
+                        in</button>
+                      <a class="text-muted" href="#!">Forgot password?</a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">Don't have an account?</p>
+                      <button type="button" class="btn btn-outline-danger">Create new</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+

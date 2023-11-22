@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h2>Danh Mục Sản Phẩm</h2>
+  <div class="row">
+    <!-- Hàng 1 -->
+    <div class="col-md-3 mb-4" *ngFor="let catepage of categorypages">
+      <!-- Sản phẩm 1 -->
+      <div class="card">
+        <img [src]="catepage.image" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">{{catepage.name}}</h5>
+          <p class="card-text">{{catepage.description}}</p>
+          <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+        </div>
+      </div>
+    </div>
